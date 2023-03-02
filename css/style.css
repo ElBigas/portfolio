@@ -1,0 +1,252 @@
+/****************** RESET ******************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #494d4b;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1,
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+/****************** COLORS ******************/
+
+:root {
+    --color1: #312c20;
+    --color2: #494d4b;
+    --color3: #7c7052;
+    --color4: #b3a176;
+    --color5: #e2cb92;
+}
+
+/****************** HEADER ******************/
+
+header {
+    background-color: var(--color1);
+    padding: 1.6em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 {
+    font-size: 2.8em;
+    font-weight: 200;
+    cursor: pointer;
+}
+header h1,
+a {
+    color: var(--color5);
+}
+header a:hover,
+h1:hover {
+    color: var(--color3);
+}
+button {
+    font-size: 18px;
+    color: var(--color5);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    margin-right: 1.7em;
+}
+
+button:focus,
+button:hover {
+    color: var(--color3);
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: '';
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color3);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/****************** FOOTER ******************/
+
+footer {
+    background-color: var(--color1);
+    padding: 1em;
+    text-align: center;
+}
+
+/****************** MAIN ******************/
+
+main {
+    padding: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .main-content {
+    display: flex;
+    flex-direction: column;
+}
+main .main-content h2 {
+    margin-bottom: 2%;
+    font-size: 2.2em;
+}
+main .main-content .text {
+    margin-bottom: 5%;
+}
+main .main-content .text p {
+    width: 90%;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/****************** CARDS ******************/
+
+.cards-container {
+    display: flex;
+    align-items: center;
+}
+.cards-container .card {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    margin-right: 1.6em;
+
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.4s ease-in-out;
+}
+.cards-container .card img {
+    width: 80%;
+}
+.cards-container .card:hover {
+    box-shadow: 0px 0px 8px var(--color5);
+    background-color: var(--color3);
+}
+
+/****************** FIGURE ******************/
+
+main figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main figure img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+
+    margin-bottom: 6%;
+    border: 1px solid var(--color5);
+    transition: 0.2s ease-in-out;
+}
+main figure img:hover {
+    box-shadow: 0px 0px 8px var(--color5);
+}
+
+/****************** RESPONSIVE ******************/
+
+#toggle-nav {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    main {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 120px;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 105px;
+    }
+    nav {
+        display: flex;
+        position: fixed;
+        top: 105px;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background-color: var(--color3);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: 0.3s ease-in-out;
+    }
+    .main-content {
+        width: 100%;
+        align-items: center;
+
+        margin-bottom: 5%;
+    }
+    main .main-content .text,
+    .techs {
+        text-align: center;
+    }
+    .cards-container,
+    .text p {
+        margin-top: 32px;
+    }    
+    #toggle-nav {
+        display: inline-block;
+    }
+    nav.show {
+        transform: translateX(0);
+        overflow: hidden;
+    }
+}
+.remove {
+    overflow: hidden;
+}
