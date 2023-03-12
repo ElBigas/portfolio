@@ -239,13 +239,14 @@ main figure img:hover {
     }
     main .main-content .text,
     .techs {
+        width: 90%;
         text-align: center;
-        align-items: center;
     }
     .text {
         width: 90%;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .cards-container,
     .text p {
