@@ -132,6 +132,14 @@ main .main-content .text p {
     font-weight: 300;
 }
 
+@media (max-width: 550px) {
+
+    header h1 {
+        font-size: 2em;
+    }
+
+}
+
 /****************** CARDS ******************/
 
 .cards-container {
@@ -186,16 +194,10 @@ main figure img:hover {
 
 /****************** RESPONSIVE ******************/
 
-.remove {
-    overflow: hidden;
-}
 #toggle-nav {
     display: none;
 }
-@media (max-width: 550px)
-header h1 {
-    font-size: 2em;
-}
+
 @media (max-width: 1200px) {
 
     body{
@@ -240,11 +242,12 @@ header h1 {
     main .main-content .text,
     .techs {
         text-align: center;
+        width: 90%;
     }
     .cards-container,
     .text p {
         margin-top: 32px;
-    }    
+    }
     #toggle-nav {
         display: inline-block;
     }
@@ -252,4 +255,7 @@ header h1 {
         transform: translateX(0);
         overflow: hidden;
     }
+}
+.remove {
+    overflow: hidden;
 }
