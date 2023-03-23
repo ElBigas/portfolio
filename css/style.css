@@ -132,12 +132,6 @@ main .main-content .text p {
     font-weight: 300;
 }
 
-@media (max-width: 550px) {
-    header h1 {
-        font-size: 2em;
-    }
-}
-
 /****************** CARDS ******************/
 
 .cards-container {
@@ -251,12 +245,20 @@ main figure img:hover {
     .text p {
         margin-top: 32px;
     }
+    .cards-container {
+    align-items: center;
+    }
     #toggle-nav {
         display: inline-block;
     }
     nav.show {
         transform: translateX(0);
         overflow: hidden;
+    }
+}
+@media (max-width: 550px) {
+    header h1 {
+        font-size: 2em;
     }
 }
 .remove {
