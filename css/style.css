@@ -142,7 +142,6 @@ main .main-content .text p {
 
 .cards-container {
     display: flex;
-    justify-content: center;
 }
 .cards-container .card {
     width: 120px;
