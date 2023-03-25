@@ -246,7 +246,7 @@ main figure img:hover {
         margin-top: 32px;
     }
     .cards-container {
-    align-items: center;
+    justify-content: center;
     }
     #toggle-nav {
         display: inline-block;
